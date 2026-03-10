@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Turbo Tonic Solutions</title>
 
   <style>
@@ -34,7 +34,7 @@
       top: 0;
       background: rgba(11, 17, 32, 0.92);
       backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       z-index: 1000;
     }
 
@@ -71,7 +71,7 @@
     .lang-switch button {
       background: transparent;
       color: white;
-      border: 1px solid rgba(255,255,255,0.25);
+      border: 1px solid rgba(255, 255, 255, 0.25);
       padding: 8px 12px;
       border-radius: 8px;
       cursor: pointer;
@@ -86,12 +86,14 @@
     }
 
     .hero {
-      padding: 90px 0 70px;
+      padding: 120px 0 90px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 56px;
+      font-size: 60px;
+      font-weight: 700;
+      letter-spacing: -1px;
       margin-bottom: 20px;
       line-height: 1.1;
     }
@@ -100,7 +102,7 @@
       font-size: 22px;
       color: #d1d5db;
       max-width: 760px;
-      margin: 0 auto 30px;
+      margin: 0 auto 35px;
     }
 
     .cta-button {
@@ -119,19 +121,20 @@
     }
 
     .section {
-      padding: 70px 0;
+      padding: 100px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .section h2 {
-      font-size: 34px;
-      margin-bottom: 16px;
+      font-size: 36px;
+      margin-bottom: 20px;
       text-align: center;
     }
 
     .section-intro {
       text-align: center;
       max-width: 820px;
-      margin: 0 auto 40px;
+      margin: 0 auto 50px;
       color: #d1d5db;
       font-size: 18px;
     }
@@ -139,15 +142,20 @@
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 40px;
+      gap: 28px;
     }
 
     .card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
-      padding: 28px;
+      padding: 30px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
     }
 
     .card h3 {
@@ -164,13 +172,13 @@
     .pricing {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 28px;
       margin-top: 30px;
     }
 
     .price-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 30px;
       display: flex;
@@ -217,8 +225,8 @@
       max-width: 760px;
       margin: 0 auto;
       text-align: center;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 36px;
     }
@@ -230,7 +238,7 @@
     }
 
     footer {
-      padding: 30px 0 50px;
+      padding: 40px 0 60px;
       text-align: center;
       color: #9ca3af;
       font-size: 14px;
@@ -256,7 +264,7 @@
       }
 
       .hero h1 {
-        font-size: 40px;
+        font-size: 42px;
       }
 
       .hero p {
@@ -294,7 +302,9 @@
     </div>
   </header>
 
+  <!-- FRENCH VERSION -->
   <div id="fr" class="lang active">
+
     <section class="hero" id="accueil">
       <div class="container">
         <h1>Automatisation intelligente pour les petites entreprises</h1>
@@ -394,9 +404,12 @@
         </div>
       </div>
     </section>
+
   </div>
 
+  <!-- ENGLISH VERSION -->
   <div id="en" class="lang">
+
     <section class="hero" id="home">
       <div class="container">
         <h1>Smart Automation for Small Businesses</h1>
@@ -417,17 +430,17 @@
         <div class="cards">
           <div class="card">
             <h3>Customer Support Automation</h3>
-            <p>Answer common customer questions automatically and reduce time spent on repetitive replies.</p>
+            <p>Automatically answer common customer questions and reduce time spent on repetitive responses.</p>
           </div>
 
           <div class="card">
             <h3>Administrative Task Automation</h3>
-            <p>Automate repetitive business tasks and reduce manual work in your day-to-day operations.</p>
+            <p>Automate repetitive business tasks and reduce manual work in your daily operations.</p>
           </div>
 
           <div class="card">
             <h3>AI Content and Communication</h3>
-            <p>Use AI to create emails, marketing content, and business communications faster.</p>
+            <p>Use AI to create emails, marketing content, and communications faster.</p>
           </div>
         </div>
       </div>
@@ -496,11 +509,12 @@
         </div>
       </div>
     </section>
+
   </div>
 
   <footer>
     <div class="container">
-      © 2026 Turbo Tonic Solutions — Basé à Montréal, Québec
+      © 2026 Turbo Tonic Solutions — Based in Montréal, Québec
     </div>
   </footer>
 
@@ -508,6 +522,7 @@
     function setLanguage(lang) {
       document.getElementById('fr').classList.remove('active');
       document.getElementById('en').classList.remove('active');
+
       document.getElementById('btn-fr').classList.remove('active');
       document.getElementById('btn-en').classList.remove('active');
 
