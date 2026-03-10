@@ -1,553 +1,403 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Turbo Tonic Solutions</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turbo Tonic Solutions</title>
 
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #0b1120 0%, #111827 100%);
-      color: #ffffff;
-      line-height: 1.6;
-    }
+*{box-sizing:border-box}
 
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(180deg,#0b1120 0%,#111827 100%);
+color:#ffffff;
+line-height:1.6;
+}
 
-    header {
-      padding: 24px 0;
-      position: sticky;
-      top: 0;
-      background: rgba(11, 17, 32, 0.92);
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+.container{
+width:90%;
+max-width:1100px;
+margin:0 auto;
+}
 
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+header{
+padding:24px 0;
+position:sticky;
+top:0;
+background:rgba(11,17,32,0.92);
+backdrop-filter:blur(8px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
 
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-    }
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
 
-    .nav {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+.logo{
+font-size:20px;
+font-weight:bold;
+}
 
-    .nav a {
-      color: #d1d5db;
-      text-decoration: none;
-      font-size: 15px;
-    }
+.nav{
+display:flex;
+gap:18px;
+}
 
-    .nav a:hover {
-      color: #ffffff;
-    }
+.nav a{
+color:#d1d5db;
+text-decoration:none;
+font-size:15px;
+}
 
-    .lang-switch button {
-      background: transparent;
-      color: white;
-      border: 1px solid rgba(255,255,255,0.25);
-      padding: 8px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-left: 8px;
-    }
+.nav a:hover{
+color:#ffffff;
+}
 
-    .lang-switch button.active {
-      background: #22c55e;
-      color: #08111f;
-      border-color: #22c55e;
-      font-weight: bold;
-    }
+.lang-switch button{
+background:transparent;
+color:white;
+border:1px solid rgba(255,255,255,0.25);
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+margin-left:8px;
+}
 
-    .hero {
-      padding: 90px 0 70px;
-      text-align: center;
-    }
+.lang-switch button.active{
+background:#22c55e;
+color:#08111f;
+border-color:#22c55e;
+font-weight:bold;
+}
 
-    .hero h1 {
-      font-size: 56px;
-      line-height: 1.1;
-      margin: 0 0 18px;
-    }
+.hero{
+padding:90px 0 70px;
+text-align:center;
+}
 
-    .hero p {
-      font-size: 22px;
-      color: #d1d5db;
-      max-width: 760px;
-      margin: 0 auto 20px;
-    }
+.hero h1{
+font-size:56px;
+margin-bottom:20px;
+}
 
-    .trust-line {
-      font-size: 17px;
-      color: #a7f3d0;
-      max-width: 760px;
-      margin: 0 auto 30px;
-    }
+.hero p{
+font-size:22px;
+color:#d1d5db;
+max-width:760px;
+margin:0 auto 30px;
+}
 
-    .cta-button {
-      display: inline-block;
-      padding: 16px 30px;
-      background: #22c55e;
-      color: #08111f;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 18px;
-    }
+.cta-button{
+display:inline-block;
+padding:16px 30px;
+background:#22c55e;
+color:#08111f;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+font-size:18px;
+}
 
-    .cta-button:hover {
-      opacity: 0.9;
-    }
+.section{
+padding:70px 0;
+}
 
-    .section {
-      padding: 70px 0;
-    }
+.section h2{
+font-size:34px;
+margin-bottom:16px;
+text-align:center;
+}
 
-    .section h2 {
-      font-size: 34px;
-      margin-bottom: 16px;
-      text-align: center;
-    }
+.section-intro{
+text-align:center;
+max-width:820px;
+margin:0 auto 40px;
+color:#d1d5db;
+font-size:18px;
+}
 
-    .section-intro {
-      text-align: center;
-      max-width: 820px;
-      margin: 0 auto 40px;
-      color: #d1d5db;
-      font-size: 18px;
-    }
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 40px;
-    }
+.card{
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:16px;
+padding:28px;
+}
 
-    .card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 28px;
-    }
+.card h3{
+margin-top:0;
+margin-bottom:12px;
+font-size:22px;
+}
 
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 22px;
-    }
+.card p{
+margin:0;
+color:#d1d5db;
+}
 
-    .card p {
-      margin: 0;
-      color: #d1d5db;
-    }
+.pricing{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+margin-top:30px;
+}
 
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 30px;
-    }
+.price-card{
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:16px;
+padding:30px;
+display:flex;
+flex-direction:column;
+}
 
-    .price-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
+.price{
+font-size:30px;
+font-weight:bold;
+margin-bottom:18px;
+color:#22c55e;
+}
 
-    .price-card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
+.price-card ul{
+padding-left:18px;
+color:#d1d5db;
+flex-grow:1;
+}
 
-    .price {
-      font-size: 30px;
-      font-weight: bold;
-      margin-bottom: 18px;
-      color: #22c55e;
-    }
+.price-card li{
+margin-bottom:10px;
+}
 
-    .price-subtitle {
-      color: #d1d5db;
-      font-size: 16px;
-      margin-bottom: 18px;
-    }
+.price-card .cta-button{
+margin-top:auto;
+text-align:center;
+}
 
-    .price-card ul {
-      padding-left: 18px;
-      color: #d1d5db;
-      margin-bottom: 24px;
-      flex-grow: 1;
-    }
+.contact-box{
+max-width:760px;
+margin:0 auto;
+text-align:center;
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:16px;
+padding:36px;
+}
 
-    .price-card li {
-      margin-bottom: 10px;
-    }
+.contact-box p{
+color:#d1d5db;
+font-size:18px;
+}
 
-    .price-card .cta-button {
-      margin-top: auto;
-      text-align: center;
-    }
+footer{
+padding:30px 0 50px;
+text-align:center;
+color:#9ca3af;
+font-size:14px;
+}
 
-    .contact-box {
-      max-width: 760px;
-      margin: 0 auto;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 16px;
-      padding: 36px;
-    }
+.lang{display:none}
+.lang.active{display:block}
 
-    .contact-box p {
-      color: #d1d5db;
-      font-size: 18px;
-      margin-bottom: 16px;
-    }
+@media (max-width:900px){
 
-    .response-time {
-      font-size: 16px;
-      color: #a7f3d0;
-      margin-bottom: 22px;
-    }
+.cards,
+.pricing{
+grid-template-columns:1fr;
+}
 
-    footer {
-      padding: 30px 0 50px;
-      text-align: center;
-      color: #9ca3af;
-      font-size: 14px;
-    }
+.hero h1{
+font-size:40px;
+}
 
-    .footer-location {
-      margin-top: 6px;
-    }
+}
 
-    .lang {
-      display: none;
-    }
-
-    .lang.active {
-      display: block;
-    }
-
-    @media (max-width: 900px) {
-      .topbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .cards,
-      .pricing {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .hero p {
-        font-size: 19px;
-      }
-
-      .trust-line {
-        font-size: 16px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div class="topbar">
-        <div class="logo">Turbo Tonic Solutions</div>
 
-        <nav class="nav" id="nav-fr">
-          <a href="#accueil">Accueil</a>
-          <a href="#services">Services</a>
-          <a href="#forfaits">Forfaits</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<header>
+<div class="container">
+<div class="topbar">
 
-        <nav class="nav" id="nav-en" style="display:none;">
-          <a href="#home">Home</a>
-          <a href="#services-en">Services</a>
-          <a href="#packages">Packages</a>
-          <a href="#contact-en">Contact</a>
-        </nav>
+<div class="logo">Turbo Tonic Solutions</div>
 
-        <div class="lang-switch">
-          <button id="btn-fr" class="active" onclick="setLanguage('fr')">FR</button>
-          <button id="btn-en" onclick="setLanguage('en')">EN</button>
-        </div>
-      </div>
-    </div>
-  </header>
+<nav class="nav" id="nav-fr">
+<a href="#accueil">Accueil</a>
+<a href="#services">Services</a>
+<a href="#forfaits">Forfaits</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  <div id="fr" class="lang active">
-    <section class="hero" id="accueil">
-      <div class="container">
-        <h1>Automatisation intelligente pour les petites entreprises</h1>
-        <p>
-          Gagnez du temps, réduisez les tâches répétitives et modernisez votre entreprise.
-        </p>
-        <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Discutons de votre projet</a>
-      </div>
-    </section>
+<nav class="nav" id="nav-en" style="display:none;">
+<a href="#home">Home</a>
+<a href="#services-en">Services</a>
+<a href="#packages">Packages</a>
+<a href="#contact-en">Contact</a>
+</nav>
 
-    <section class="section" id="services">
-      <div class="container">
-        <h2>Services</h2>
-        <p class="section-intro">
-          Nous aidons les petites entreprises à adopter l’intelligence artificielle de façon simple et concrète. Notre objectif est d’implanter des solutions utiles qui font réellement gagner du temps au quotidien.
-        </p>
+<div class="lang-switch">
+<button id="btn-fr" class="active" onclick="setLanguage('fr')">FR</button>
+<button id="btn-en" onclick="setLanguage('en')">EN</button>
+</div>
 
-        <div class="cards">
-          <div class="card">
-            <h3>Automatisation du service client</h3>
-            <p>Répondez automatiquement aux questions fréquentes de vos clients et réduisez le temps passé sur les réponses répétitives.</p>
-          </div>
+</div>
+</div>
+</header>
 
-          <div class="card">
-            <h3>Automatisation des tâches administratives</h3>
-            <p>Automatisez les tâches répétitives de votre entreprise afin de réduire le travail manuel au quotidien.</p>
-          </div>
+<div id="fr" class="lang active">
 
-          <div class="card">
-            <h3>Contenu et communications assistés par IA</h3>
-            <p>Utilisez l’IA pour créer plus rapidement vos courriels, contenus marketing et communications d’entreprise.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="hero" id="accueil">
+<div class="container">
+<h1>Automatisation intelligente pour les petites entreprises</h1>
 
-    <section class="section" id="forfaits">
-      <div class="container">
-        <h2>Forfaits</h2>
-        <p class="section-intro">
-          Des offres claires et concrètes pour aider votre entreprise à adopter l’IA à son rythme.
-        </p>
+<p>
+Gagnez du temps, réduisez les tâches répétitives et modernisez votre entreprise.
+</p>
 
-        <div class="pricing">
-          <div class="price-card">
-            <h3>Forfait Démarrage IA</h3>
-            <div class="price">499$</div>
-            <div class="price-subtitle">Pour commencer simplement</div>
-            <ul>
-              <li>Consultation et analyse des besoins</li>
-              <li>Mise en place d’un outil IA</li>
-              <li>Automatisation simple d’une tâche répétitive</li>
-              <li>Formation de base</li>
-            </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choisir ce forfait</a>
-          </div>
+<a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">
+Discutons de votre projet
+</a>
 
-          <div class="price-card">
-            <h3>Forfait Productivité IA</h3>
-            <div class="price">990$</div>
-            <div class="price-subtitle">Pour automatiser davantage</div>
-            <ul>
-              <li>Analyse des processus de l’entreprise</li>
-              <li>Mise en place de plusieurs outils IA</li>
-              <li>Automatisation de tâches répétitives</li>
-              <li>Optimisation des communications clients</li>
-              <li>Formation de l’équipe</li>
-            </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choisir ce forfait</a>
-          </div>
+</div>
+</section>
 
-          <div class="price-card">
-            <h3>Forfait Mise en place complète</h3>
-            <div class="price">1990$</div>
-            <div class="price-subtitle">Pour une transformation plus complète</div>
-            <ul>
-              <li>Tout ce qui est inclus dans le forfait Productivité IA</li>
-              <li>Création d’un site web simple et professionnel</li>
-              <li>Mise en place d’un chatbot</li>
-              <li>Automatisation de plusieurs processus</li>
-              <li>Configuration complète</li>
-            </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choisir ce forfait</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="section" id="services">
+<div class="container">
 
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-box">
-          <h2>Parlons-en</h2>
-          <p>
-            Vous souhaitez voir comment l’IA pourrait aider votre entreprise? Contactez-nous pour discuter d’une solution adaptée à vos besoins.
-          </p>
-          <div class="response-time">
-            Réponse sous 24 à 48 heures.
-          </div>
-          <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Nous contacter</a>
-        </div>
-      </div>
-    </section>
-  </div>
+<h2>Services</h2>
 
-  <div id="en" class="lang">
-    <section class="hero" id="home">
-      <div class="container">
-        <h1>Smart Automation for Small Businesses</h1>
-        <p>
-          Save time, reduce repetitive tasks, and modernize your business.
-        </p>
-        <div class="trust-line">
-          Simple solutions, implemented quickly, without unnecessary technical complexity.
-        </div>
-        <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Let’s Talk About Your Project</a>
-      </div>
-    </section>
+<p class="section-intro">
+Nous aidons les petites entreprises à adopter l’intelligence artificielle de façon simple et concrète. Notre objectif est d’implanter des solutions utiles qui font réellement gagner du temps au quotidien.
+</p>
 
-    <section class="section" id="services-en">
-      <div class="container">
-        <h2>Services</h2>
-        <p class="section-intro">
-          We help small businesses adopt artificial intelligence in a simple and practical way. Our goal is to implement useful solutions that truly save time in everyday operations.
-        </p>
+<div class="cards">
 
-        <div class="cards">
-          <div class="card">
-            <h3>Customer Support Automation</h3>
-            <p>Answer common customer questions automatically and reduce time spent on repetitive replies.</p>
-          </div>
+<div class="card">
+<h3>Automatisation du service client</h3>
+<p>Répondez automatiquement aux questions fréquentes de vos clients et réduisez le temps passé sur les réponses répétitives.</p>
+</div>
 
-          <div class="card">
-            <h3>Administrative Task Automation</h3>
-            <p>Automate repetitive business tasks and reduce manual work in your day-to-day operations.</p>
-          </div>
+<div class="card">
+<h3>Automatisation des tâches administratives</h3>
+<p>Automatisez les tâches répétitives de votre entreprise afin de réduire le travail manuel au quotidien.</p>
+</div>
 
-          <div class="card">
-            <h3>AI Content and Communication</h3>
-            <p>Use AI to create emails, marketing content, and business communications faster.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="card">
+<h3>Contenu et communications assistés par IA</h3>
+<p>Utilisez l’IA pour créer plus rapidement vos courriels, contenus marketing et communications d’entreprise.</p>
+</div>
 
-    <section class="section" id="packages">
-      <div class="container">
-        <h2>Packages</h2>
-        <p class="section-intro">
-          Clear and practical offers to help your business adopt AI at the right pace.
-        </p>
+</div>
+</div>
+</section>
 
-        <div class="pricing">
-          <div class="price-card">
-            <h3>AI Starter Package</h3>
-            <div class="price">$499</div>
-            <div class="price-subtitle">To get started simply</div>
-            <ul>
-              <li>Consultation and needs analysis</li>
-              <li>Setup of one AI tool</li>
-              <li>Simple automation of one repetitive task</li>
-              <li>Basic training</li>
-            </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choose This Package</a>
-          </div>
+<section class="section" id="forfaits">
+<div class="container">
 
-          <div class="price-card">
-            <h3>AI Productivity Package</h3>
-            <div class="price">$990</div>
-            <div class="price-subtitle">To automate more</div>
-            <ul>
-              <li>Business workflow analysis</li>
-              <li>Setup of multiple AI tools</li>
-              <li>Automation of repetitive tasks</li>
-              <li>Customer communication optimization</li>
-              <li>Team training</li>
-            </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choose This Package</a>
-          </div>
+<h2>Forfaits</h2>
 
-          <div class="price-card">
-            <h3>Complete Business Setup</h3>
-            <div class="price">$1990</div>
-            <div class="price-subtitle">For a more complete transformation</div>
-            <ul>
-              <li>Everything included in the AI Productivity Package</li>
-              <li>Creation of a simple professional website</li>
-              <li>Chatbot implementation</li>
-              <li>Automation of multiple processes</li>
-              <li>Complete setup</li>
-            </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choose This Package</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<p class="section-intro">
+Des offres claires et concrètes pour aider votre entreprise à adopter l’IA à son rythme.
+</p>
 
-    <section class="section" id="contact-en">
-      <div class="container">
-        <div class="contact-box">
-          <h2>Let’s Talk</h2>
-          <p>
-            Curious about how AI could help your business? Reach out and let’s discuss a solution adapted to your needs.
-          </p>
-          <div class="response-time">
-            Response within 24 to 48 hours.
-          </div>
-          <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Contact Us</a>
-        </div>
-      </div>
-    </section>
-  </div>
+<div class="pricing">
 
-  <footer>
-    <div class="container">
-      <div>© 2026 Turbo Tonic Solutions. Tous droits réservés.</div>
-      <div class="footer-location">Basé à Montréal, Québec.</div>
-    </div>
-  </footer>
+<div class="price-card">
+<h3>Forfait Démarrage IA</h3>
+<div class="price">499$</div>
+<ul>
+<li>Consultation et analyse des besoins</li>
+<li>Mise en place d’un outil IA</li>
+<li>Automatisation simple d’une tâche</li>
+<li>Formation de base</li>
+</ul>
+<a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choisir ce forfait</a>
+</div>
 
-  <script>
-    function setLanguage(lang) {
-      document.getElementById('fr').classList.remove('active');
-      document.getElementById('en').classList.remove('active');
-      document.getElementById('btn-fr').classList.remove('active');
-      document.getElementById('btn-en').classList.remove('active');
+<div class="price-card">
+<h3>Forfait Productivité IA</h3>
+<div class="price">990$</div>
+<ul>
+<li>Analyse des processus</li>
+<li>Mise en place de plusieurs outils IA</li>
+<li>Automatisation des tâches</li>
+<li>Formation de l’équipe</li>
+</ul>
+<a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choisir ce forfait</a>
+</div>
 
-      document.getElementById(lang).classList.add('active');
-      document.getElementById('btn-' + lang).classList.add('active');
+<div class="price-card">
+<h3>Forfait Mise en place complète</h3>
+<div class="price">1990$</div>
+<ul>
+<li>Tout le forfait Productivité</li>
+<li>Création d’un site web simple</li>
+<li>Mise en place d’un chatbot</li>
+<li>Automatisation complète</li>
+</ul>
+<a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choisir ce forfait</a>
+</div>
 
-      document.getElementById('nav-fr').style.display = lang === 'fr' ? 'flex' : 'none';
-      document.getElementById('nav-en').style.display = lang === 'en' ? 'flex' : 'none';
+</div>
+</div>
+</section>
 
-      document.documentElement.lang = lang;
-    }
-  </script>
+<section class="section" id="contact">
+<div class="container">
+
+<div class="contact-box">
+
+<h2>Parlons-en</h2>
+
+<p>
+Vous souhaitez voir comment l’IA pourrait aider votre entreprise ?
+Contactez-nous pour discuter d’une solution adaptée.
+</p>
+
+<a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">
+Nous contacter
+</a>
+
+</div>
+</div>
+</section>
+
+</div>
+
+<footer>
+<div class="container">
+© 2026 Turbo Tonic Solutions — Basé à Montréal, Québec
+</div>
+</footer>
+
+<script>
+
+function setLanguage(lang){
+
+document.getElementById('fr').classList.remove('active');
+document.getElementById('en').classList.remove('active');
+
+document.getElementById('btn-fr').classList.remove('active');
+document.getElementById('btn-en').classList.remove('active');
+
+document.getElementById(lang).classList.add('active');
+document.getElementById('btn-'+lang).classList.add('active');
+
+}
+
+</script>
+
 </body>
 </html>
