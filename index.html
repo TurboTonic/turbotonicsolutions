@@ -92,15 +92,7 @@
     .hero h1 {
       font-size: 56px;
       line-height: 1.1;
-      margin: 0 0 14px;
-    }
-
-    .hero .subheadline {
-      font-size: 22px;
-      color: #22c55e;
-      max-width: 820px;
-      margin: 0 auto 20px;
-      font-weight: bold;
+      margin: 0 0 18px;
     }
 
     .hero p {
@@ -137,7 +129,7 @@
 
     .section-intro {
       text-align: center;
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto 40px;
       color: #d1d5db;
       font-size: 18px;
@@ -179,6 +171,9 @@
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 16px;
       padding: 30px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .price-card h3 {
@@ -194,14 +189,26 @@
       color: #22c55e;
     }
 
+    .price-subtitle {
+      color: #d1d5db;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
     .price-card ul {
       padding-left: 18px;
       color: #d1d5db;
       margin-bottom: 24px;
+      flex-grow: 1;
     }
 
     .price-card li {
       margin-bottom: 10px;
+    }
+
+    .price-card .cta-button {
+      margin-top: auto;
+      text-align: center;
     }
 
     .contact-box {
@@ -250,7 +257,6 @@
         font-size: 40px;
       }
 
-      .hero .subheadline,
       .hero p {
         font-size: 19px;
       }
@@ -291,11 +297,8 @@
     <section class="hero" id="accueil">
       <div class="container">
         <h1>Automatisation intelligente pour les petites entreprises</h1>
-        <div class="subheadline">
-          Des solutions d’automatisation et d’intelligence artificielle simples pour les petites entreprises.
-        </div>
         <p>
-          Nous aidons les petites entreprises à gagner du temps, réduire les tâches répétitives et améliorer leur efficacité grâce à des solutions d’intelligence artificielle simples et utiles.
+          Gagnez du temps, réduisez les tâches répétitives et modernisez votre entreprise.
         </p>
         <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Réserver une consultation gratuite</a>
       </div>
@@ -333,23 +336,6 @@
         <p class="section-intro">
           Nous aidons les petites entreprises à adopter l’intelligence artificielle de façon simple et concrète. Notre objectif est d’implanter des solutions utiles qui font réellement gagner du temps au quotidien.
         </p>
-
-        <div class="cards">
-          <div class="card">
-            <h3>Automatisation de tâches répétitives</h3>
-            <p>Nous simplifions le travail quotidien en mettant en place des automatisations pratiques et faciles à utiliser.</p>
-          </div>
-
-          <div class="card">
-            <h3>Assistance IA pour le contenu et les communications</h3>
-            <p>Nous aidons les entreprises à produire plus rapidement des courriels, contenus et communications professionnelles.</p>
-          </div>
-
-          <div class="card">
-            <h3>Création de sites web simples et professionnels</h3>
-            <p>Nous pouvons aussi mettre en place un site web clair, moderne et professionnel pour mieux présenter votre entreprise.</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -363,19 +349,21 @@
         <div class="pricing">
           <div class="price-card">
             <h3>Forfait Démarrage IA</h3>
-            <div class="price">300$ – 500$</div>
+            <div class="price">499$</div>
+            <div class="price-subtitle">Pour commencer simplement</div>
             <ul>
               <li>Consultation et analyse des besoins</li>
               <li>Mise en place d’un outil IA</li>
               <li>Automatisation simple d’une tâche répétitive</li>
               <li>Formation de base</li>
             </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Demander ce forfait</a>
+            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choisir ce forfait</a>
           </div>
 
           <div class="price-card">
             <h3>Forfait Productivité IA</h3>
-            <div class="price">800$ – 1200$</div>
+            <div class="price">990$</div>
+            <div class="price-subtitle">Pour automatiser davantage</div>
             <ul>
               <li>Analyse des processus de l’entreprise</li>
               <li>Mise en place de plusieurs outils IA</li>
@@ -383,12 +371,13 @@
               <li>Optimisation des communications clients</li>
               <li>Formation de l’équipe</li>
             </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Demander ce forfait</a>
+            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choisir ce forfait</a>
           </div>
 
           <div class="price-card">
             <h3>Forfait Mise en place complète</h3>
-            <div class="price">1500$ – 2500$</div>
+            <div class="price">1990$</div>
+            <div class="price-subtitle">Pour une transformation plus complète</div>
             <ul>
               <li>Tout ce qui est inclus dans le forfait Productivité IA</li>
               <li>Création d’un site web simple et professionnel</li>
@@ -396,7 +385,7 @@
               <li>Automatisation de plusieurs processus</li>
               <li>Configuration complète</li>
             </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Demander ce forfait</a>
+            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choisir ce forfait</a>
           </div>
         </div>
       </div>
@@ -419,11 +408,8 @@
     <section class="hero" id="home">
       <div class="container">
         <h1>Smart Automation for Small Businesses</h1>
-        <div class="subheadline">
-          Simple AI and automation solutions for small businesses.
-        </div>
         <p>
-          We help small businesses save time, reduce repetitive tasks, and improve efficiency with simple, practical AI solutions.
+          Save time, reduce repetitive tasks, and modernize your business.
         </p>
         <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Book a Free Consultation</a>
       </div>
@@ -459,25 +445,8 @@
       <div class="container">
         <h2>Why Choose Turbo Tonic Solutions</h2>
         <p class="section-intro">
-          We help small businesses adopt artificial intelligence in a simple and practical way. Our goal is to implement useful solutions that save time in everyday operations.
+          We help small businesses adopt artificial intelligence in a simple and practical way. Our goal is to implement useful solutions that truly save time in everyday operations.
         </p>
-
-        <div class="cards">
-          <div class="card">
-            <h3>Automation of Repetitive Tasks</h3>
-            <p>We simplify daily operations by implementing practical automations that are easy to use.</p>
-          </div>
-
-          <div class="card">
-            <h3>AI Assistance for Content and Communication</h3>
-            <p>We help businesses create emails, content, and professional communications more efficiently.</p>
-          </div>
-
-          <div class="card">
-            <h3>Simple Professional Website Creation</h3>
-            <p>We can also create a clear, modern, professional website to help present your business online.</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -485,25 +454,27 @@
       <div class="container">
         <h2>Packages</h2>
         <p class="section-intro">
-          Clear, practical offers to help your business adopt AI at the right pace.
+          Clear and practical offers to help your business adopt AI at the right pace.
         </p>
 
         <div class="pricing">
           <div class="price-card">
             <h3>AI Starter Package</h3>
-            <div class="price">$300 – $500</div>
+            <div class="price">$499</div>
+            <div class="price-subtitle">To get started simply</div>
             <ul>
               <li>Consultation and needs analysis</li>
               <li>Setup of one AI tool</li>
               <li>Simple automation of one repetitive task</li>
               <li>Basic training</li>
             </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Request This Package</a>
+            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choose This Package</a>
           </div>
 
           <div class="price-card">
             <h3>AI Productivity Package</h3>
-            <div class="price">$800 – $1200</div>
+            <div class="price">$990</div>
+            <div class="price-subtitle">To automate more</div>
             <ul>
               <li>Business workflow analysis</li>
               <li>Setup of multiple AI tools</li>
@@ -511,12 +482,13 @@
               <li>Customer communication optimization</li>
               <li>Team training</li>
             </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Request This Package</a>
+            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choose This Package</a>
           </div>
 
           <div class="price-card">
             <h3>Complete Business Setup</h3>
-            <div class="price">$1500 – $2500</div>
+            <div class="price">$1990</div>
+            <div class="price-subtitle">For a more complete transformation</div>
             <ul>
               <li>Everything included in the AI Productivity Package</li>
               <li>Creation of a simple professional website</li>
@@ -524,7 +496,7 @@
               <li>Automation of multiple processes</li>
               <li>Complete setup</li>
             </ul>
-            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Request This Package</a>
+            <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Choose This Package</a>
           </div>
         </div>
       </div>
@@ -535,7 +507,7 @@
         <div class="contact-box">
           <h2>Let’s Talk</h2>
           <p>
-            Curious about how AI could help your business? Reach out and let’s discuss solutions that make sense for your needs.
+            Curious about how AI could help your business? Reach out and let’s discuss solutions adapted to your needs.
           </p>
           <a class="cta-button" href="mailto:turbotonicsolutions@outlook.com">Contact Turbo Tonic Solutions</a>
         </div>
