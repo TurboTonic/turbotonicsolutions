@@ -1,73 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Turbo Tonic Solutions</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turbo Tonic Solutions</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#0f172a;
-color:white;
-text-align:center;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #0b1120 0%, #111827 100%);
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-.hero{
-padding:100px 20px;
-}
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-h1{
-font-size:48px;
-margin-bottom:10px;
-}
+    header {
+      padding: 24px 0;
+    }
 
-p{
-font-size:20px;
-opacity:0.8;
-}
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-.button{
-display:inline-block;
-margin-top:30px;
-padding:15px 30px;
-background:#22c55e;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-}
+    .hero {
+      padding: 90px 0 70px;
+      text-align: center;
+    }
 
-.section{
-padding:80px 20px;
-max-width:900px;
-margin:auto;
-}
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      margin: 0 0 18px;
+    }
 
-</style>
+    .hero p {
+      font-size: 22px;
+      color: #d1d5db;
+      max-width: 760px;
+      margin: 0 auto 30px;
+    }
 
+    .cta-button {
+      display: inline-block;
+      padding: 16px 30px;
+      background: #22c55e;
+      color: #08111f;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .cta-button:hover {
+      opacity: 0.9;
+    }
+
+    .section {
+      padding: 70px 0;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 40px;
+      color: #d1d5db;
+      font-size: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #d1d5db;
+    }
+
+    .contact-box {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 36px;
+    }
+
+    .contact-box p {
+      color: #d1d5db;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      padding: 30px 0 50px;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 19px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="container">
+      <div class="logo">Turbo Tonic Solutions</div>
+    </div>
+  </header>
 
-<div class="hero">
-<h1>Turbo Tonic Solutions</h1>
-<p>AI Automation for Small Businesses</p>
-<a class="button" href="mailto:your@email.com">Contact Us</a>
-</div>
+  <section class="hero">
+    <div class="container">
+      <h1>AI Automation for Small Businesses</h1>
+      <p>
+        We help businesses save time, reduce repetitive work, and improve efficiency with practical AI solutions.
+      </p>
+      <a class="cta-button" href="mailto:youremail@example.com">Book a Free Consultation</a>
+    </div>
+  </section>
 
-<div class="section">
-<h2>What We Do</h2>
-<p>We help businesses save time and increase productivity using AI automation tools.</p>
-</div>
+  <section class="section">
+    <div class="container">
+      <h2>What We Do</h2>
+      <p class="section-intro">
+        Turbo Tonic Solutions helps small businesses use AI in a simple, useful way — without the confusion, hype, or technical overwhelm.
+      </p>
 
-<div class="section">
-<h2>Services</h2>
-<p>• AI Chatbots<br>
-• Workflow Automation<br>
-• AI Content Creation</p>
-</div>
+      <div class="cards">
+        <div class="card">
+          <h3>AI Chatbots</h3>
+          <p>Create smarter customer support experiences that answer common questions and save you time.</p>
+        </div>
 
+        <div class="card">
+          <h3>Workflow Automation</h3>
+          <p>Automate repetitive tasks so your business can run more smoothly and focus on what matters.</p>
+        </div>
+
+        <div class="card">
+          <h3>Content Assistance</h3>
+          <p>Use AI to help generate business content, marketing ideas, and communication faster.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Let’s Talk</h2>
+        <p>
+          Curious about how AI could help your business? Reach out and let’s discuss what makes sense for your needs.
+        </p>
+        <a class="cta-button" href="mailto:youremail@example.com">Contact Turbo Tonic Solutions</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 Turbo Tonic Solutions. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
