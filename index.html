@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,8 +31,32 @@
       padding: 24px 0;
     }
 
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
     .logo {
       font-size: 20px;
+      font-weight: bold;
+    }
+
+    .lang-switch button {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+
+    .lang-switch button.active {
+      background: #22c55e;
+      color: #08111f;
+      border-color: #22c55e;
       font-weight: bold;
     }
 
@@ -134,7 +158,20 @@
       font-size: 14px;
     }
 
+    .lang {
+      display: none;
+    }
+
+    .lang.active {
+      display: block;
+    }
+
     @media (max-width: 900px) {
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .cards {
         grid-template-columns: 1fr;
       }
@@ -152,62 +189,134 @@
 <body>
   <header>
     <div class="container">
-      <div class="logo">Turbo Tonic Solutions</div>
+      <div class="topbar">
+        <div class="logo">Turbo Tonic Solutions</div>
+        <div class="lang-switch">
+          <button id="btn-fr" class="active" onclick="setLanguage('fr')">FR</button>
+          <button id="btn-en" onclick="setLanguage('en')">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>AI Automation for Small Businesses</h1>
-      <p>
-        We help businesses save time, reduce repetitive work, and improve efficiency with practical AI solutions.
-      </p>
-      <a class="cta-button" href="mailto:youremail@example.com">Book a Free Consultation</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>What We Do</h2>
-      <p class="section-intro">
-        Turbo Tonic Solutions helps small businesses use AI in a simple, useful way — without the confusion, hype, or technical overwhelm.
-      </p>
-
-      <div class="cards">
-        <div class="card">
-          <h3>AI Chatbots</h3>
-          <p>Create smarter customer support experiences that answer common questions and save you time.</p>
-        </div>
-
-        <div class="card">
-          <h3>Workflow Automation</h3>
-          <p>Automate repetitive tasks so your business can run more smoothly and focus on what matters.</p>
-        </div>
-
-        <div class="card">
-          <h3>Content Assistance</h3>
-          <p>Use AI to help generate business content, marketing ideas, and communication faster.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="contact-box">
-        <h2>Let’s Talk</h2>
+  <div id="fr" class="lang active">
+    <section class="hero">
+      <div class="container">
+        <h1>Automatisation IA pratique pour les petites entreprises</h1>
         <p>
-          Curious about how AI could help your business? Reach out and let’s discuss what makes sense for your needs.
+          Nous aidons les petites entreprises à gagner du temps, réduire les tâches répétitives et améliorer leur efficacité grâce à des solutions d’intelligence artificielle simples et utiles.
         </p>
-        <a class="cta-button" href="mailto:youremail@example.com">Contact Turbo Tonic Solutions</a>
+        <a class="cta-button" href="mailto:youremail@example.com">Réserver une consultation gratuite</a>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Ce que nous faisons</h2>
+        <p class="section-intro">
+          Turbo Tonic Solutions aide les petites entreprises à utiliser l’IA de façon pratique et accessible — sans confusion, sans battage marketing et sans complexité inutile.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Automatisation du service client</h3>
+            <p>Répondez automatiquement aux questions fréquentes de vos clients et réduisez le temps passé sur les réponses répétitives.</p>
+          </div>
+
+          <div class="card">
+            <h3>Automatisation des tâches administratives</h3>
+            <p>Automatisez les tâches répétitives de votre entreprise afin de réduire le travail manuel au quotidien.</p>
+          </div>
+
+          <div class="card">
+            <h3>Contenu et communications assistés par IA</h3>
+            <p>Utilisez l’IA pour créer plus rapidement vos courriels, contenus marketing et communications d’entreprise.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Parlons-en</h2>
+          <p>
+            Vous souhaitez voir comment l’IA pourrait aider votre entreprise? Contactez-nous pour discuter de solutions adaptées à vos besoins.
+          </p>
+          <a class="cta-button" href="mailto:youremail@example.com">Contacter Turbo Tonic Solutions</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="en" class="lang">
+    <section class="hero">
+      <div class="container">
+        <h1>Practical AI Automation for Small Businesses</h1>
+        <p>
+          We help small businesses save time, reduce repetitive tasks, and improve efficiency with simple, practical AI solutions.
+        </p>
+        <a class="cta-button" href="mailto:youremail@example.com">Book a Free Consultation</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>What We Do</h2>
+        <p class="section-intro">
+          Turbo Tonic Solutions helps small businesses use AI in a practical, accessible way — without confusion, hype, or unnecessary complexity.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Customer Support Automation</h3>
+            <p>Answer common customer questions automatically and reduce time spent on repetitive replies.</p>
+          </div>
+
+          <div class="card">
+            <h3>Administrative Task Automation</h3>
+            <p>Automate repetitive business tasks and reduce manual work in your day-to-day operations.</p>
+          </div>
+
+          <div class="card">
+            <h3>AI Content and Communication</h3>
+            <p>Use AI to create emails, marketing content, and business communications faster.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Let’s Talk</h2>
+          <p>
+            Curious about how AI could help your business? Reach out and let’s discuss solutions that make sense for your needs.
+          </p>
+          <a class="cta-button" href="mailto:youremail@example.com">Contact Turbo Tonic Solutions</a>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <footer>
     <div class="container">
-      © 2026 Turbo Tonic Solutions. All rights reserved.
+      © 2026 Turbo Tonic Solutions. Tous droits réservés.
     </div>
   </footer>
+
+  <script>
+    function setLanguage(lang) {
+      document.getElementById('fr').classList.remove('active');
+      document.getElementById('en').classList.remove('active');
+      document.getElementById('btn-fr').classList.remove('active');
+      document.getElementById('btn-en').classList.remove('active');
+
+      document.getElementById(lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+
+      document.documentElement.lang = lang;
+    }
+  </script>
 </body>
 </html>
